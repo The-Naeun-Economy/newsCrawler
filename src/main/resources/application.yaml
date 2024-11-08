@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: news
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 131072
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
