@@ -20,7 +20,7 @@ jobs:
         distribution: 'temurin'
     
     - name: Build with Gradle
-      run: ./gradlew build -x test  # 빌드를 하고 테스트는 제외
+      run: ./gradlew build
     
     - name: Build Docker image
       run: |
