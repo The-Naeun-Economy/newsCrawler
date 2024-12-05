@@ -27,5 +27,10 @@ public class NewsController {
     public List<News> getNews() {
         return newsService.getNews();
     }
+
+    @GetMapping("/health")
+    public String healthCheck() {
+        return "up";
+    }
 }
 

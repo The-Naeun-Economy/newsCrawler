@@ -23,7 +23,6 @@ public class News {
     String title;
     @Column(name = "URL")
     String url;
-
 }
 
 
