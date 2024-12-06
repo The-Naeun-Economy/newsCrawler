@@ -39,9 +39,9 @@ jobs:
 #      run: |
 #        docker push jogyoungjun/news:latest
 
-    - name: aws eks update kubeconfig
+    - name: kubectl version Check
       run: |
-        aws eks --region us-east-1 update-kubeconfig --name repick-eks
+        kubectl version --client
 
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v4
