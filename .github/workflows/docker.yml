@@ -57,6 +57,6 @@ jobs:
 
     - name: Helm install
       run: |
-        helm install news ./news
+        helm upgrade --install news ./news
           
           
