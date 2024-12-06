@@ -26,5 +26,9 @@ public class NewsController {
     public List<News> getNews() {
         return newsService.getNews();
     }
+    @GetMapping("/ping")
+    public String ping() {
+        return "pong";
+    }
 }
 
