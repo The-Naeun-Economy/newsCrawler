@@ -50,9 +50,10 @@ jobs:
       run: |
         aws eks --region us-east-1 update-kubeconfig --name repick-eks
 
-    - name: Helm Chart install
-      run: |
-        sudo apt-get install helm
+    - name: Install Helm
+      uses: azure/setup-helm@v3
+      with:
+        version: '3.16.2'
 
     - name: Helm install
       run: |
