@@ -28,7 +28,7 @@ public class NewsController {
     }
     @GetMapping("/ping")
     public String ping() {
-        return "pong";
+        return "pingpong";
     }
 }
 
