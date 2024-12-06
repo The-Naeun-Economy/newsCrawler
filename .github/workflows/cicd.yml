@@ -39,9 +39,9 @@ jobs:
 #      run: |
 #        docker push jogyoungjun/news:latest
 
-    - name: kubectl version Check
+    - name: eksctl version Check
       run: |
-        kubectl version --client
+        eksctl version
 
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v4
