@@ -91,14 +91,6 @@ jobs:
         sudo apt-get update
         sudo apt-get install helm
 
-    - name: Helm uninstall
-      run: |
-        helm uninstall news
-
-    - name: Helm check
-      run: |
-        helm list
-
     - name: Helm install
       run: |
         helm upgrade --install news ./news
