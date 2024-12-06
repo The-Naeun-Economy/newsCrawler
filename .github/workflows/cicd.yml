@@ -57,7 +57,15 @@ jobs:
         echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
         sudo apt-get update
         sudo apt-get install helm
-    
+
+    - name: Helm uninstall
+      run: |
+        helm uninstall news    
+
+    - name: Helm check
+      run: |
+        helm list
+
     - name: Helm install
       run: |
         helm upgrade --install news ./news
