@@ -22,15 +22,9 @@ public class NewsController {
         newsService.newsCrawling();
         return "success";
     }
-
     @GetMapping
     public List<News> getNews() {
         return newsService.getNews();
-    }
-
-    @GetMapping("/health")
-    public String healthCheck() {
-        return "up";
     }
 }
 
