@@ -55,7 +55,6 @@ jobs:
         kubectl rollout restart deployment user-server
 
     - name: Notify Slack
-      if: always()
       run: |
         curl -X POST -H 'Content-type: application/json' \
         --data '{"text":""Successful Deploy : ${GITHUB_REF}"}' \
