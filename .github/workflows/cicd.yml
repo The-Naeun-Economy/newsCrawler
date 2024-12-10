@@ -56,7 +56,7 @@ jobs:
 
     - name: Notify Slack
       run: |
-        curl -X POST -H 'Content-type: application/json' --data '{"text":"Successful Deploy : ${{GITHUB_REF}}"}' ${{ secrets.SLACK_WEBHOOK_URL }}
+        curl -X POST -H 'Content-type: application/json' --data '{"text":"Successful Deploy : news"}' ${{ secrets.SLACK_WEBHOOK_URL }}
 
           
           
