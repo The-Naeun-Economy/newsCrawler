@@ -23,6 +23,10 @@ public class News {
     String title;
     @Column(name = "URL")
     String url;
+    @Column(name = "TIME")
+    String time;
+    @Column(name = "IMAGE_PATH")
+    String imagePath;
 }
 
 

@@ -51,7 +51,13 @@ class NewsApplicationTests {
     @Test
     void testRepository() {
         newsRepository.deleteAll();
-        News news = new News(202412031208L, "호프만에이전시코리아, 2024 ‘올해의 PR에이전시’ 은상 수상", "https://www.hankyung.com/article/202412031208i");
+        News news = new News(
+                202412031208L,
+                "호프만에이전시코리아, 2024 ‘올해의 PR에이전시’ 은상 수상",
+                "https://www.hankyung.com/article/202412031208i",
+                "2024.12.05 17:35",
+                "news-images/202412055717.jpg"
+                );
 
         News news1 = newsRepository.save(news);
         List<News> newss = newsRepository.findAll();
@@ -63,8 +69,20 @@ class NewsApplicationTests {
     @Test
     void testServiceGetNews() {
         newsRepository.deleteAll();
-        News news1 = new News(202412031208L, "호프만에이전시코리아, 2024 ‘올해의 PR에이전시’ 은상 수상", "https://www.hankyung.com/article/202412031208i");
-        News news2 = new News(202412031209L, "호프만에이전시코리아, 2024 ‘올해의 PR에이전시’ 금상 수상", "https://www.hankyung.com/article/202412031208i");
+        News news1 = new News(
+                202412031208L,
+                "호프만에이전시코리아, 2024 ‘올해의 PR에이전시’ 은상 수상",
+                "https://www.hankyung.com/article/202412031208i",
+                "2024.12.05 17:35",
+                "news-images/202412055717.jpg"
+        );
+        News news2 = new News(
+                202412031209L,
+                "호프만에이전시코리아, 2024 ‘올해의 PR에이전시’ 금상 수상",
+                "https://www.hankyung.com/article/202412031208i",
+                "2024.12.05 17:35",
+                "news-images/202412055717.jpg"
+        );
         newsRepository.save(news1);
         newsRepository.save(news2);
 

@@ -7,7 +7,6 @@ spring:
     username: ${DB_USERNAME:root}
     password: ${DB_PASSWORD:131072}
 
-
   jpa:
     hibernate:
       ddl-auto: create
@@ -21,3 +20,10 @@ spring:
         order_updates: true
 server:
   port: 8090
+
+
+aws:
+  s3:
+    region: us-east-1
+    bucket:
+      name: repick-eks-news-images
